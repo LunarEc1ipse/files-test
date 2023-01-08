@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 
 public class TextFileTest {
     @Test
-    void TxtFileTest() throws IOException {
+    void SimpleTxtFileTest() throws IOException {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         String textFile;
         try (InputStream stream = classLoader.getResourceAsStream("sample.txt")){

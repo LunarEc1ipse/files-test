@@ -10,11 +10,10 @@ import java.io.InputStream;
 public class PdfFileTest {
 
     @Test
-    void simplePdfFileTest() throws IOException {
+    void SimplePdfFileTest() throws IOException {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        PDF parsedPDF;
         InputStream stream = classLoader.getResourceAsStream("sample.pdf");
-        parsedPDF = new PDF(stream);
+        PDF parsedPDF = new PDF(stream);
         Assertions.assertTrue((parsedPDF.text.contains("This is a small demonstration .pdf file")));
     }
 }
