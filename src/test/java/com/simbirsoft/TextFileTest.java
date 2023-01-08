@@ -13,7 +13,7 @@ public class TextFileTest {
     void SimpleTxtFileTest() throws IOException {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         String textFile;
-        try (InputStream stream = classLoader.getResourceAsStream("sample.txt")){
+        try (InputStream stream = classLoader.getResourceAsStream("sample.txt")) {
             textFile = IOUtils.toString(stream, StandardCharsets.UTF_8);
         }
         Assertions.assertTrue((textFile.contains
